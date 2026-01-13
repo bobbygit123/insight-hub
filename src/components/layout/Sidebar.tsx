@@ -11,8 +11,8 @@ import {
   UserCog,
   ChevronLeft,
   ChevronRight,
-  Eye,
 } from 'lucide-react';
+import innovexLogo from '@/assets/innovex-logo.png';
 import { cn } from '@/lib/utils';
 
 const navigation = [
@@ -44,13 +44,11 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
       {/* Logo */}
       <div className="flex h-16 items-center justify-between px-4 border-b border-sidebar-border">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-cyan-400 flex items-center justify-center">
-            <Eye className="w-5 h-5 text-primary-foreground" />
-          </div>
+          <img src={innovexLogo} alt="Innovex Logo" className="w-8 h-8 object-contain" />
           {!collapsed && (
             <div className="flex flex-col">
-              <span className="font-semibold text-foreground text-sm">Vision Analytics</span>
-              <span className="text-xs text-muted-foreground">by Innovex</span>
+              <span className="font-semibold text-foreground text-sm">Vision AI</span>
+              <span className="text-xs text-muted-foreground">by Innovex Group</span>
             </div>
           )}
         </div>
